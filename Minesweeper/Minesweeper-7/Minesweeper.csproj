@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A136864-6002-44A6-9344-EE96DD773C7C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Minesweeper</RootNamespace>
+    <AssemblyName>MinesweeperGame</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\MinesweeperGame.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\MinesweeperGame.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PowerCollections">
+      <HintPath>packages\XAct.Wintellect.PowerCollections.0.0.1\lib\net20\PowerCollections.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CellRepresentor.cs" />
+    <Compile Include="ConsoleInputOutputManager.cs" />
+    <Compile Include="ConsoleReader.cs" />
+    <Compile Include="ConsoleRenderer.cs" />
+    <Compile Include="Contracts\IAdjacencyMap.cs" />
+    <Compile Include="Contracts\IRenderer.cs" />
+    <Compile Include="Contracts\IReadInput.cs" />
+    <Compile Include="GeneralFieldPopulator.cs" />
+    <Compile Include="MinesweeperAdjacencyMap.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="Field.cs" />
+    <Compile Include="Contracts\IEngine.cs" />
+    <Compile Include="Contracts\IField.cs" />
+    <Compile Include="Contracts\IGeneratable.cs" />
+    <Compile Include="Contracts\IGenerator.cs" />
+    <Compile Include="Contracts\IInputOutputManager.cs" />
+    <Compile Include="Contracts\IScoreBoard.cs" />
+    <Compile Include="FieldFactory.cs" />
+    <Compile Include="Mine.cs" />
+    <Compile Include="MineGenerator.cs" />
+    <Compile Include="Minesweeper.cs" />
+    <Compile Include="MinesweeperField.cs" />
+    <Compile Include="PlayingField.cs" />
+    <Compile Include="RandomNumber.cs" />
+    <Compile Include="ScoreBoard.cs" />
+    <Compile Include="Telerik.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="MinesweeperClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
