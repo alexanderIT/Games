@@ -1,0 +1,35 @@
+.stone {
+    background-image: url("../img/stone.jpg");
+    background-size: 100%;
+    position: absolute;
+}
+
+.placeholder {
+    background-image: url("../img/placeholder.jpg");
+    background-size: 100%;
+    position: absolute;
+}
+
+.block {
+    background-image: url("../img/crate.jpg");
+    background-size: 100%;
+    position: absolute;
+}
+
+.player {
+    border: 10px solid;
+    position: absolute;
+}
+
+#restart {
+    margin-left: 500px;
+}
+
+#sokoban {
+    position: relative;
+
+}
+
+#restart-game {
+    margin-bottom: 5px;
+}

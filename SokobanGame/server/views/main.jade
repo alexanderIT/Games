@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    .container
+        .row.hidden#game
+            .col-xs-6#game-display
+                h3 Game display
+                button#restart-game.btn.btn-primary Restart
+                #sokoban
+            .col-xs-2
+                h3 Players
+                dl.dl-horizontal#players
+            .col-xs-4#chat
+
+        .row
+            .col-xs-9
+                .list-group#gameRooms
+                    h2 Rooms
+                    if gameRooms.length == 0
+                        #no-active-game-rooms.alert.alert-info(role="alert") There are currently no active game rooms!
+                    each gameRoom in gameRooms
+                        div(id=gameRoom.roomId).list-group-item
+                            h3.list-group-item-heading= gameRoom.roomName
+                            p.list-group-item-text= gameRoom.description
+                            p.list-group-item-text Chosen level: #{gameRoom.levelId}
+                            p.list-group-item-text Players:
+                                span#players-in #{gameRoom.playersIn}
+                        #{gameRoom.allPlayers}
+    button(id=gameRoom.roomId, href="#modal-join-game-room", data-toggle="modal", disabled=gameRoom.playersIn === gameRoom.allPlayers).btn.btn-sm.btn-info.room Join
+// Modal
+#modal-join-game-room.modal.fade(tabindex='-1', role='dialog', aria-labelledby='join-game-room-label', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            form#game-room-join(role='form', data-parsley-validate)
+                .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                        span(aria-hidden='true')&times;
+                        span.sr-only Close
+                    h4#join-game-room-label.modal-title Join game room
+                .modal-body
+                    .form-group
+                        label(for='player-name') Player name:
+                        input#player-name.form-control(required, type='text', placeholder='Enter player name', value='Player')
+                        input#game-room-id.hidden(value="")
+                .modal-footer
+                    button.btn.btn-default(type='button', data-dismiss='modal') Close
+                    input#confirm-join-game-room.btn.btn-primary(value='Confirm', type='submit')
+.col-xs-3#new-game-room
