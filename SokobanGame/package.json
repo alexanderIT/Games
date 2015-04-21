@@ -5,6 +5,7 @@
   "main": "server.js",
   "author": "AM",
   "license": "MIT",
+  "start": "node server.js",
   "dependencies": {
     "body-parser": "^1.12.2",
     "connect-busboy": "0.0.2",
