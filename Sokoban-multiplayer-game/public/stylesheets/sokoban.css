@@ -1,0 +1,49 @@
+.stone {
+    background-image: url("../images/stone.jpg");
+    background-size: 100%;
+    position:absolute;
+}
+
+.placeholder {
+    background-image: url("../images/placeholder.jpg");
+    background-size: 100%;
+    position:absolute;
+}
+
+.block {
+    background-image: url("../images/crate.jpg");
+    background-size: 100%;
+    position:absolute;
+}
+
+.player{
+    border:10px solid;
+    position:absolute;
+}
+#restart {
+    margin-left: 500px;
+}
+#sokoban {
+    position: relative;
+    /*height: 400px;*/
+}
+
+#chat {
+    position: relative;
+}
+
+
+#messages { list-style-type: none; margin: 0; padding: 0; }
+#messages li { padding: 5px 10px; }
+#messages li:nth-child(odd) { background: #eee; }
+
+.input-append .btn.dropdown-toggle {
+    float: none;
+}
+
+#form-message button {
+    margin-top: 5px;
+}
+#restart-game {
+    margin-bottom: 5px;
+}

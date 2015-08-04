@@ -1,0 +1,4 @@
+C:\Users\Administrator\Desktop\The Mill Game\TheMillGame\TheMillGame\bin\Debug\TheMillGame.exe
+C:\Users\Administrator\Desktop\The Mill Game\TheMillGame\TheMillGame\bin\Debug\TheMillGame.pdb
+C:\Users\Administrator\Desktop\The Mill Game\TheMillGame\TheMillGame\obj\Debug\TheMillGame.exe
+C:\Users\Administrator\Desktop\The Mill Game\TheMillGame\TheMillGame\obj\Debug\TheMillGame.pdb
